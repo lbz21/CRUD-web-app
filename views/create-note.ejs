@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
+      <meta name="description" content="" />
+      <title>Create-note</title>
+
+      <link
+        rel="canonical"
+        href="https://getbootstrap.com/docs/4.5/examples/album/"
+      />
+
+      <!-- Bootstrap core CSS -->
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous"
+      />
+
+      <link href="css/album.css" rel="stylesheet" />
+      <script>
+        function validateForm()
+        var x = document.forms["myForm"]["Name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+
+      </script>
+      <style>
+       .btn{
+        background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+	padding: 0 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-right: 125px;
+       }
+  
+        
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #111;
+        }
+        
+        .active {
+          background-color: #04AA6D;
+        }
+      </style>
+    </head>
+    <body>
+
+      <ul>
+        <li><a  href="index">Home</a></li>
+        <li><a href="what-I-do">What I do?</a></li>
+        <li><a class="active" href="create-note">Write a feedback</a></li>
+        <li><a href="notes">User's feedback</a></li>
+      </ul>
+
+      
+      <div class="container">
+        <div class="collapse navbar-collapse" id="idCollapse">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="index.ejs">About time-management <span class="sr-only">(current)</span></a>
+              </li>
+  
+              <li class="nav-item">
+                  <a class="nav-link" href="Whatdoido.html">What do I do?</a>
+              </li>
+  
+              <li class="nav-item">
+                  <a class="nav-link" href="Advice.html">Advice</a>
+              </li>
+  
+  
+  
+              <li class="nav-item">
+                  <a class="nav-link" href="create-note">Write a feedback</a>
+              </li>
+  
+              <li class="nav-item">
+                  <a class="nav-link" href="register.html">Register with us</a>
+              </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+          </ul>
+  
+  
+      </div>
+  </nav>
+        <h1 class="text-center">Write a feedback on your experience using our service and information</h1>
+        <div class="row justify-content-md-center">
+          <div class="col-">
+
+            <h1>Have a question, or maybe you want to share your views?</h1>
+	<p class="p3">If my website has helped changing your attitude towards time-management, and are interested in any news, updates, and events, or perhaps you have a suggesting on how 
+		we can improve our service and make it more user-friendly? On this page you can see the feedbacks provided by our recent users.
+	</p>
+	<p> I value my customer's feedback feedback</p>
+	<p> Please complete the following form, and help me improve the customer experience.</p>
+
+<form method="POST" action="/create-note" onsubmit="return validateForm()" name="myForm" required>
+  <div class="form-group"></div>
+    ... 
+    <input
+              type="text"
+              class="form-control"
+              id="Name"
+              name="Name"
+              placeholder="Enter your name"
+              required/>            
+    </div>
+
+    <input
+    type="text"
+    class="form-control"
+    id="Surname"
+    name="Surname"
+    placeholder="Enter your surname"
+
+    required/>
+  <div class="form-group"></div>
+
+  <input
+    type="text"
+    class="form-control"
+    id="Email"
+    name="Email"
+    placeholder="Enter your email"
+    required />
+  </div>
+
+   ...
+   <div class="form-group"></div>
+
+   <input
+   type="text"
+   class="form-control"
+   id="Comment"
+   name="Comment"
+   placeholder="Enter your Comment"
+    required/>
+  </div>
+<br>
+
+   <button type="submit" value="submit" class="btn btn-primary">Submit feedback</button>
+
+   ...
+
+   <% if (errors['name']) { %>
+    <p style="color: red"><%= errors['name'].message %></p>
+<% } %>
+  </div>
+
+</form>
+
+</div>
+</div>
+</div>
+</body>
+</html>
+</html>

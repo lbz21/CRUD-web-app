@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <title>World Wines</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.5/examples/album/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link href="css/album.css" rel="stylesheet" />
+
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #111;
+        }
+        
+        .active {
+          background-color: #04AA6D;
+        }
+        </style>
+  </head>
+  <body>
+
+    <ul>
+        <li><a  href="index">Home</a></li>
+        <li><a  href="what-I-do">What I do?</a></li>
+        <li><a href="create-note">Write a feedback</a></li>
+        <li><a class="active" href="notes">User's feedback</a></li>
+      </ul>
+<div class="container">
+    <div class="row col-md-12 col-md-offset-2 custyle mx-auto">
+
+     
+          
+      
+<h1 class="mx-auto"> User's reviews on our website and service experienced  </h1>
+<p>If my website has helped changing your attitude towards time-management, and are interested in any news, updates, and events, or perhaps you have a suggesting on how we can improve our service and make it more user-friendly?
+
+  I value my customer's feedback feedback
+  
+  Please complete the following form, and help me improve the customer experience.
+</p>
+
+<br>
+<div class="col-md-12 col-md-offset-2  justify-content-center">
+  <a role="button" class="btn btn-primary btn-xs" href="/create-note">Write a feedback</a> 
+
+</div><br>
+
+
+<table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Comment</th>
+
+
+        </tr>
+
+        <%  
+        notes.forEach(function(note) { %>
+            <tr>
+            <td><%=  note._id  %></td>
+            <td><%=  note.Name  %></td>
+            <td><%=  note.Surname  %></td>
+                <td><%=  note.Email  %></td>
+                    <td><%=  note.Comment  %></td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/update-note" ><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                        <a  href="/notes/delete/<%= note._id %>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete record</a></td>
+            </tr>
+
+
+            <% }); %>
+            
+
+        </thead>
+          
+    </table>
+
+     
+    </div>
+    
+  
+  </body>
+</html>
